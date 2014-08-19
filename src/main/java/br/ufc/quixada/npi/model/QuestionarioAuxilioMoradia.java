@@ -33,7 +33,8 @@ public class QuestionarioAuxilioMoradia {
 	
 	public enum MoraCom{
 		Pais("Pais"), Pai("Pai"), Mae("Mãe"), Irmaos("irmãos"), Parentes("Parentes"),
-		Conjuge_Companheiro("Cônjuge ou Companheiro(a)"), Filhos("Filhos(as)"), Outra_moradia("Outros");
+		Conjuge_Companheiro("Cônjuge ou Companheiro(a)"), Filhos("Filhos(as)"),
+		Outra_moradia("Outros");
 		MoraCom(String nome) {
 
 		}
@@ -42,7 +43,13 @@ public class QuestionarioAuxilioMoradia {
 	private MoraCom moraCom;
 	
 	@Column(nullable = false)
-	private String enderecoSedeCurso;
+	private String ruaSedeCurso;
+	
+	@Column(nullable = false)
+	private int numeroSedeCurso;
+	
+	@Column(nullable = false)
+	private String bairroSedeCurso;
 	
 	@Column(nullable = false)
 	private String nomeMae;
@@ -180,9 +187,9 @@ public class QuestionarioAuxilioMoradia {
 	private String justificativa;
 	
 	@Column(nullable = false)
-	@Temporal(TemporalType.DATE)
-	private Date dataInscricao;
-
+	private double rendaMediafamilia;
+	
+	
 	public Integer getId() {
 		return id;
 	}
@@ -202,10 +209,10 @@ public class QuestionarioAuxilioMoradia {
 		this.moraCom = moraCom;
 	}
 	public String getEnderecoSedeCurso() {
-		return enderecoSedeCurso;
+		return ruaSedeCurso;
 	}
 	public void setEnderecoSedeCurso(String enderecoSedeCurso) {
-		this.enderecoSedeCurso = enderecoSedeCurso;
+		this.ruaSedeCurso = enderecoSedeCurso;
 	}
 	public String getNomeMae() {
 		return nomeMae;
@@ -438,12 +445,6 @@ public class QuestionarioAuxilioMoradia {
 	public void setJustificativa(String justificativa) {
 		this.justificativa = justificativa;
 	}
-	public Date getData_inscricao() {
-		return dataInscricao;
-	}
-	public void setData_inscricao(Date data_inscricao) {
-		this.dataInscricao = data_inscricao;
-	}
 	public Bolsa getBolsa() {
 		return bolsa;
 	}
@@ -455,7 +456,7 @@ public class QuestionarioAuxilioMoradia {
 		return "QuestionarioAuxilioMoradia [id=" + id + ", caminhoFoto="
 				+ caminhoFoto + ", bolsa=" + bolsa + ", pessoas=" + pessoas
 				+ ", moraCom=" + moraCom + ", enderecoSedeCurso="
-				+ enderecoSedeCurso + ", nomeMae=" + nomeMae + ", nomePai="
+				+ ruaSedeCurso + ", nomeMae=" + nomeMae + ", nomePai="
 				+ nomePai + ", rua=" + rua + ", numeroCasa=" + numeroCasa
 				+ ", bairro=" + bairro + ", complemento=" + complemento
 				+ ", cidade=" + cidade + ", cep=" + cep + ", pontoReferencia="
@@ -480,6 +481,6 @@ public class QuestionarioAuxilioMoradia {
 				+ ", possuiGraduacao=" + possuiGraduacao
 				+ ", descricaoGraduacao=" + descricaoGraduacao
 				+ ", justificativa=" + justificativa + ", data_inscricao="
-				+ dataInscricao + "]";
+				+ "]";
 	}
 }

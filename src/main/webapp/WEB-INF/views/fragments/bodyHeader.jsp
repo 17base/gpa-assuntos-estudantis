@@ -22,7 +22,10 @@
 		            <li><a href="<c:url value=''/>">Adicionar</a></li>
 		            <li class="divider"></li>
 		            <li><a href="<c:url value='alunos.htm'/>">Listar</a></li>
+		          	<li class="divider"></li>
+		          	<li><a href="<c:url value=''/>">Inscrição</a></li>
 		          </ul>
+		          
 		        </li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servidor<b class="caret"></b></a>

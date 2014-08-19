@@ -47,6 +47,8 @@ public class AlunoController {
 			model.put("selections", results);
 			return "aluno/alunosList";
 		} catch (Exception e) {
+			e.getMessage();
+			
 			// Mensagem com erro, falta corrigir
 			return "aluno/alunosList";
 		}
