@@ -8,6 +8,7 @@ import javax.inject.Named;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.ufc.quixada.npi.model.Aluno;
+import br.ufc.quixada.npi.model.QuestionarioAuxilioMoradia;
 import br.ufc.quixada.npi.model.Servidor;
 import br.ufc.quixada.npi.service.GenericService;
 
@@ -69,6 +71,4 @@ public class AlunoController {
 				return "ok";
 			}
 		}
-	
-	
 }

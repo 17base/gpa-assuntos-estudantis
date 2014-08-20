@@ -13,4 +13,6 @@ public interface GenericService<T> {
 	public abstract List<T> find(Class<T> entityClass);
 
 	public abstract void delete(T entity);
+	
+	
 }
