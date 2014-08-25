@@ -48,7 +48,7 @@
 				<br>Mora com: <br/>
 				<c:out value="${questionarioAuxilioMoradia.moraCom}" />
 				<h:selectOneMenu  name="estado" id="estado">    
-    			<f:selectItems value="#{pessoas.estado}" />  
+<%--     			<f:selectItems value="#{pessoas.estado}" />   --%>
 				</h:selectOneMenu>
 			</datatables:column>
 			 
@@ -111,14 +111,14 @@
 			<datatables:column title="situacaoImovel" cssStyle="width: 200px;">
 				<c:out value="${questionarioAuxilioMoradia.pessoas.situacaoImovel}" />
 				<h:selectOneMenu  name="imovel" id="situacaoImovel">    
-    			<f:selectItems value="#{pessoas.situacaoImovel}" />  
+<%--     			<f:selectItems value="#{pessoas.situacaoImovel}" />   --%>
 				</h:selectOneMenu>
 			</datatables:column>
 			
 			<datatables:column title="grauParentescoImovelRural" cssStyle="width: 200px;">
 				<c:out value="${questionarioAuxilioMoradia.pessoas.grauParentescoImovelRural}" />
 				<h:selectOneMenu  name="imovelRural" id="grauParentescoImovelRural">    
-    			<f:selectItems value="#{pessoas.grauParentescoImovelRural}" />  
+<%--     			<f:selectItems value="#{pessoas.grauParentescoImovelRural}" />   --%>
 				</h:selectOneMenu> 
 			</datatables:column>
 			
@@ -137,7 +137,7 @@
 			<datatables:column title="grauParentescoVeiculos" cssStyle="width: 200px;">
 				<c:out value="${questionarioAuxilioMoradia.pessoas.grauParentescoVeiculos}" />
 				<h:selectOneMenu  name="veiculo" id="grauParentescoVeiculos">    
-    			<f:selectItems value="#{pessoas.grauParentescoVeiculos}" />  
+<%--     			<f:selectItems value="#{pessoas.grauParentescoVeiculos}" />   --%>
 				</h:selectOneMenu/>
 			</datatables:column>
 			
@@ -160,7 +160,7 @@
 			<datatables:column title="finalidadeVeiculo" cssStyle="width: 200px;">
 				<c:out value="${questionarioAuxilioMoradia.pessoas.finalidadeVeiculo}" />
 				<h:selectOneMenu  name="veiculoFinalidade" id="finalidadeVeiculo">    
-    			<f:selectItems value="#{pessoas.finalidadeVeiculo}" />  
+<%--     			<f:selectItems value="#{pessoas.finalidadeVeiculo}" />   --%>
 				</h:selectOneMenu/>
 			</datatables:column>			
 			

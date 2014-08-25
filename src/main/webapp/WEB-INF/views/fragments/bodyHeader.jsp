@@ -23,7 +23,9 @@
 		            <li class="divider"></li>
 		            <li><a href="<c:url value='alunos.htm'/>">Listar</a></li>
 		          	<li class="divider"></li>
-		          	<li><a href="<c:url value=''/>">Inscrição</a></li>
+		          	<li><a href="<c:url value='formAux.htm'/>">Inscrição Auxílio</a></li>
+		          	<li class="divider"></li>
+		          	<li><a href="<c:url value='iniciacao.htm'/>">Inscrição Iniciação</a></li>
 		          </ul>
 		          
 		        </li>

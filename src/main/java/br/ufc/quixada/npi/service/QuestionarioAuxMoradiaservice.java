@@ -1,5 +1,5 @@
 package br.ufc.quixada.npi.service;
 
-public interface QuestionarioAuxMoradiaservice extends GenericService<T>{
+public interface QuestionarioAuxMoradiaservice<T> extends GenericService<T>{
 
 }
