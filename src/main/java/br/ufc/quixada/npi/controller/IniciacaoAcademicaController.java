@@ -19,24 +19,16 @@ import br.ufc.quixada.npi.model.QuestionarioIniciacaoAcademica;
 public class IniciacaoAcademicaController {
 
 	
-private Logger log = LoggerFactory.getLogger(this.getClass());
-
-	
 	@InitBinder
 	protected void initBinder(HttpServletRequest request, ServletRequestDataBinder binder)
 			throws ServletException {
 		binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());
 	}
 	
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String index() {
-		log.info("controller: projeto - action: index");
-		return "index";
-	}
 	
-	@RequestMapping(value = "/iniciacao", method = RequestMethod.GET)
+	@RequestMapping(value = "iniciacao", method = RequestMethod.GET)
 	public String cadastro(Model model) {
-		model.addAttribute("questionarioIniciacaoAcademicaService", new QuestionarioIniciacaoAcademica());
+		model.addAttribute("questionarioIniciacaoAcademica", new QuestionarioIniciacaoAcademica());
 		return "inscricao/iniciacao";
 	}
 	

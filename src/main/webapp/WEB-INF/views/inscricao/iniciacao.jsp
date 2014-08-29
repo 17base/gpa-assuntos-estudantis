@@ -227,13 +227,13 @@
 			<datatables:column title="Editar" display="html" property="editar">
 				<button id="btnEditar" class="btn btn-default btn-lg editarAluno"
 					data-toggle="modal" data-target="#myModal"
-					onclick="povoaForm('<c:url value="/inscricao/${formAux.id}" />', '#add-aluno-form', this);">
+					onclick="povoaForm('<c:url value="/inscricao/${iniciacao.id}" />', '#add-aluno-form', this);">
 					<span class="glyphicon glyphicon-edit"></span>
 				</button>
 			</datatables:column>
 			<datatables:column title="Excluir" display="html" property="excluir">
 				<button id="btnExcluir" class="btn btn-default btn-lg"
-					onclick="excluir('#alunos','<c:url value="/inscricao/${formAux.id}" />', this);">
+					onclick="excluir('#alunos','<c:url value="/inscricao/${iniciacao.id}" />', this);">
 					<span class="glyphicon glyphicon-trash"></span>
 				</button>
 			</datatables:column>

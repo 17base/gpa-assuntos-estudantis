@@ -16,7 +16,7 @@ import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 
 import br.ufc.quixada.npi.model.QuestionarioAuxilioMoradia;
 import br.ufc.quixada.npi.model.QuestionarioIniciacaoAcademica;
-import br.ufc.quixada.npi.service.QuestionarioAuxMoradiaservice;
+import br.ufc.quixada.npi.service.QuestionarioAuxMoradiaService;
 
 
 @Controller
@@ -43,10 +43,10 @@ public class AuxilioMoradiaController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/formAux", method = RequestMethod.GET)
+	@RequestMapping(value = "auxilio", method = RequestMethod.GET)
 	public String cadastro(Model model) {
-		model.addAttribute("questionarioAuxMoradiaservice", new QuestionarioAuxilioMoradia());
-		return "inscricao/formAux";
+		model.addAttribute("questionarioAuxMoradia", new QuestionarioAuxilioMoradia());
+		return "inscricao/auxilio";
 	}
 	
 	
