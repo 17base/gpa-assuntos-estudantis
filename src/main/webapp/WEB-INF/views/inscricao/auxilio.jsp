@@ -46,7 +46,7 @@
 				<br>Mora com: <br/>
 
 			</datatables:column>
-			 
+		</datatables:table>
  			
 			 
 			 
