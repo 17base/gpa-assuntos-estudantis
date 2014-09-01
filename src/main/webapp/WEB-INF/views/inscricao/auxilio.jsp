@@ -36,8 +36,8 @@
 	</div>
 
 		<!-- Button trigger modal -->
-		<button id="btnAdicionar" class="btn btn-primary" data-toggle="modal"
-			data-target="#myModal">Inscrição Alunos</button>
+<!-- 		<button id="btnAdicionar" class="btn btn-primary" data-toggle="modal" -->
+<!-- 			data-target="#myModal">Inscrição Alunos</button> -->
 
 		<datatables:table id="QuestionarioAuxilioMoradia" data="${selections}" cdn="false"
 			row="aluno" theme="bootstrap2" cssClass="table table-striped"
@@ -51,6 +51,36 @@
 <%--     			<f:selectItems value="#{pessoas.estado}" />   --%>
 <!-- 				</h:selectOneMenu> -->
 			</datatables:column>
+			 
+<!-- 			 <div class="container"> -->
+<!-- 		<div class="novo-projeto" align="left"> -->
+<!-- 			<div class="form" align="center"> -->
+<%-- 				<form:form id="ruasedecurso" role="form" commandName="ruasede" servletRelativeAction="/inscricao/auxilio" method="POST" cssClass="form-horizontal" /> --%>
+
+<!-- 					<div class="form-group"> -->
+<!-- 						<label for="nome" class="col-sm-2 control-label">Rua sede curso:</label> -->
+<!-- 						<div class="col-sm-10"> -->
+<%-- 							<form:input id="ruaSedeCurso" path="ruaSedeCurso" cssClass="form-control" placeholder="Nome da rua sede do curso"/> --%>
+<!-- 							<div class="error-validation"> -->
+<%-- 								<form:errors path="ruaSedeCurso"></form:errors> --%>
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+			 
+			 
+			 <form:form id="adicionarAlunoForm" role="form" commandName="aluno" servletRelativeAction="/inscricao/auxilio" method="POST" cssClass="form-horizontal">
+
+<div class="form-group"> <label for="ruaSedeCurso" class="col-sm-2 control-label">Rua sede do curso:</label>
+ <div class="col-sm-10">
+ <form:input id="ruaSedeCurso" path="ruaSedeCurso" cssClass="form-control" placeholder="Rua sede do curso"/>
+ <div class="error-validation"> <form:errors path="ruaSedeCurso">
+</form:errors> 
+</div>
+ </div> 
+</div> 
+</form:form>
+			 
+			 
 			 
 			 <datatables:column title="ruaSedeCurso" cssStyle="width: 200px;">
 				<c:out value="${questionarioAuxilioMoradia.pessoas.ruaSedeCurso}" />

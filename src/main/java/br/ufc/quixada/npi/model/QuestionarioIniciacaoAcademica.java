@@ -32,8 +32,8 @@ public class QuestionarioIniciacaoAcademica {
 	private int numero;
 	private String complemento;
 	private String bairro;
-	private String uf;
 	private String cep;
+	private String estado;
 	private String cidade;
 	private String ponto_referencia;
 	private String telefone_fixo;
@@ -43,9 +43,9 @@ public class QuestionarioIniciacaoAcademica {
 	private String endereco_familia;
 	private int numero_familia;
 	private String bairro_familia;
-	private String uf_familia;
 	private String complemento_familia;
 	private String cep_familia;
+	private String estado_familia;
 	private String cidade_familia;
 	private String ponto_referencia_familia;
 	
@@ -59,8 +59,6 @@ public class QuestionarioIniciacaoAcademica {
 	
 	private NivelInstrucao nivel_instrucao_mae;
 	private NivelInstrucao nivel_instrucao_pai;
-	private String reside_atualmente;
-	private String definicao_local_atual;
 	
 	public enum SituacaoResidencia{
 		cedido("Cedido"), proprio("Próprio"), alugado("Alugado"), doado("Doado");
@@ -104,9 +102,20 @@ public class QuestionarioIniciacaoAcademica {
 	private String horario_disponivel_bolsa;
 	private String campus_preferido;
 	private int justificativa_pedido;
-	private Date data_inscricao;
 	
 	
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public String getEstado_familia() {
+		return estado_familia;
+	}
+	public void setEstado_familia(String estado_familia) {
+		this.estado_familia = estado_familia;
+	}
 	public GrauParentesco getParentesco() {
 		return parentesco;
 	}
@@ -143,12 +152,7 @@ public class QuestionarioIniciacaoAcademica {
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	public String getUf() {
-		return uf;
-	}
-	public void setUf(String uf) {
-		this.uf = uf;
-	}
+	
 	public String getCep() {
 		return cep;
 	}
@@ -203,12 +207,7 @@ public class QuestionarioIniciacaoAcademica {
 	public void setBairro_familia(String bairro_familia) {
 		this.bairro_familia = bairro_familia;
 	}
-	public String getUf_familia() {
-		return uf_familia;
-	}
-	public void setUf_familia(String uf_familia) {
-		this.uf_familia = uf_familia;
-	}
+	
 	public String getComplemento_familia() {
 		return complemento_familia;
 	}
@@ -251,18 +250,7 @@ public class QuestionarioIniciacaoAcademica {
 	public void setNivel_instrucao_pai(NivelInstrucao nivel_instrucao_pai) {
 		this.nivel_instrucao_pai = nivel_instrucao_pai;
 	}
-	public String getReside_atualmente() {
-		return reside_atualmente;
-	}
-	public void setReside_atualmente(String reside_atualmente) {
-		this.reside_atualmente = reside_atualmente;
-	}
-	public String getDefinicao_local_atual() {
-		return definicao_local_atual;
-	}
-	public void setDefinicao_local_atual(String definicao_local_atual) {
-		this.definicao_local_atual = definicao_local_atual;
-	}
+	
 	public SituacaoResidencia getSituacao_residencia() {
 		return situacao_residencia;
 	}
@@ -425,12 +413,7 @@ public class QuestionarioIniciacaoAcademica {
 	public void setJustificativa_pedido(int justificativa_pedido) {
 		this.justificativa_pedido = justificativa_pedido;
 	}
-	public Date getData_inscricao() {
-		return data_inscricao;
-	}
-	public void setData_inscricao(Date data_inscricao) {
-		this.data_inscricao = data_inscricao;
-	}
+	
 	public Bolsa getBolsa() {
 		return bolsa;
 	}
@@ -448,22 +431,20 @@ public class QuestionarioIniciacaoAcademica {
 		return "QuestionarioIniciacaoAcademica [id=" + id + ", bolsa=" + bolsa
 				+ ", pessoas=" + pessoas + ", endereco_atual=" + endereco_atual
 				+ ", numero=" + numero + ", complemento=" + complemento
-				+ ", bairro=" + bairro + ", uf=" + uf + ", cep=" + cep
+				+ ", bairro=" + bairro + ", cep=" + cep + ", estado=" + estado
 				+ ", cidade=" + cidade + ", ponto_referencia="
 				+ ponto_referencia + ", telefone_fixo=" + telefone_fixo
 				+ ", telefone_celular=" + telefone_celular + ", email=" + email
 				+ ", endereco_familia=" + endereco_familia
 				+ ", numero_familia=" + numero_familia + ", bairro_familia="
-				+ bairro_familia + ", uf_familia=" + uf_familia
-				+ ", complemento_familia=" + complemento_familia
-				+ ", cep_familia=" + cep_familia + ", cidade_familia="
+				+ bairro_familia + ", complemento_familia="
+				+ complemento_familia + ", cep_familia=" + cep_familia
+				+ ", estado_familia=" + estado_familia + ", cidade_familia="
 				+ cidade_familia + ", ponto_referencia_familia="
 				+ ponto_referencia_familia + ", anos_estudo_privado="
 				+ anos_estudo_privado + ", nivel_instrucao_mae="
 				+ nivel_instrucao_mae + ", nivel_instrucao_pai="
-				+ nivel_instrucao_pai + ", reside_atualmente="
-				+ reside_atualmente + ", definicao_local_atual="
-				+ definicao_local_atual + ", situacao_residencia="
+				+ nivel_instrucao_pai + ", situacao_residencia="
 				+ situacao_residencia + ", qtd_aparelho_som="
 				+ qtd_aparelho_som + ", qtd_televisao=" + qtd_televisao
 				+ ", qtd_radio=" + qtd_radio + ", qtd_automovel="
@@ -484,8 +465,7 @@ public class QuestionarioIniciacaoAcademica {
 				+ ", renda_total_familia=" + renda_total_familia
 				+ ", horario_disponivel_bolsa=" + horario_disponivel_bolsa
 				+ ", campus_preferido=" + campus_preferido
-				+ ", justificativa_pedido=" + justificativa_pedido
-				+ ", data_inscricao=" + data_inscricao + "]";
+				+ ", justificativa_pedido=" + justificativa_pedido + "]";
 	}
 	
 	

@@ -43,7 +43,7 @@ public class AuxilioMoradiaController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "auxilio", method = RequestMethod.GET)
+	@RequestMapping(value = "/auxilio", method = RequestMethod.GET)
 	public String cadastro(Model model) {
 		model.addAttribute("questionarioAuxMoradia", new QuestionarioAuxilioMoradia());
 		return "inscricao/auxilio";
