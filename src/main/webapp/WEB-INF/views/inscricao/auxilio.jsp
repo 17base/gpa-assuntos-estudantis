@@ -35,9 +35,7 @@
 		>&times;</button>
 	</div>
 
-		<!-- Button trigger modal -->
-<!-- 		<button id="btnAdicionar" class="btn btn-primary" data-toggle="modal" -->
-<!-- 			data-target="#myModal">Inscrição Alunos</button> -->
+
 
 		<datatables:table id="QuestionarioAuxilioMoradia" data="${selections}" cdn="false"
 			row="aluno" theme="bootstrap2" cssClass="table table-striped"
@@ -46,26 +44,10 @@
 				
 			 <datatables:column title="mora Com" cssStyle="width: 200px;">
 				<br>Mora com: <br/>
-				<c:out value="${questionarioAuxilioMoradia.moraCom}" />
-<!-- 				<h:selectOneMenu  name="estado" id="estado">     -->
-<%--     			<f:selectItems value="#{pessoas.estado}" />   --%>
-<!-- 				</h:selectOneMenu> -->
+
 			</datatables:column>
 			 
-<!-- 			 <div class="container"> -->
-<!-- 		<div class="novo-projeto" align="left"> -->
-<!-- 			<div class="form" align="center"> -->
-<%-- 				<form:form id="ruasedecurso" role="form" commandName="ruasede" servletRelativeAction="/inscricao/auxilio" method="POST" cssClass="form-horizontal" /> --%>
-
-<!-- 					<div class="form-group"> -->
-<!-- 						<label for="nome" class="col-sm-2 control-label">Rua sede curso:</label> -->
-<!-- 						<div class="col-sm-10"> -->
-<%-- 							<form:input id="ruaSedeCurso" path="ruaSedeCurso" cssClass="form-control" placeholder="Nome da rua sede do curso"/> --%>
-<!-- 							<div class="error-validation"> -->
-<%-- 								<form:errors path="ruaSedeCurso"></form:errors> --%>
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
+ 			
 			 
 			 
 			 <form:form id="adicionarAlunoForm" role="form" commandName="aluno" servletRelativeAction="/inscricao/auxilio" method="POST" cssClass="form-horizontal">
@@ -82,197 +64,7 @@
 			 
 			 
 			 
-			 <datatables:column title="ruaSedeCurso" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.ruaSedeCurso}" />
-			</datatables:column>
-			
-			<datatables:column title="numeroSedeCurso" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.numeroSedeCurso}" />
-			</datatables:column>
-			
-			<datatables:column title="bairroSedeCurso" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.bairroSedeCurso}" />
-			</datatables:column>
-			
-			<datatables:column title="nomeMae" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.nomeMae}" />
-			</datatables:column>
-			
-			<datatables:column title="nomePai" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.nomePai}" />
-			</datatables:column>
-				
-			<datatables:column title="rua" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.rua}" />
-			</datatables:column>
-								
-			<datatables:column title="numeroCasa" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.numeroCasa}" />
-			</datatables:column>
-				
-			<datatables:column title="bairro" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.bairro}" />
-			</datatables:column>
-			
-			<datatables:column title="complemento" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.complemento}" />
-			</datatables:column>
-			
-			<datatables:column title="cidade" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.cidade}" />
-			</datatables:column>
-			
-			<datatables:column title="cep" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.cep}" />
-			</datatables:column>
-			
-			<datatables:column title="pontoReferencia" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.pontoReferencia}" />
-			</datatables:column>
-			
-			<datatables:column title="telefone" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.telefone}" />
-			</datatables:column>
-			
-			<datatables:column title="estado" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.estado}" />
-			</datatables:column>
-			
-			<datatables:column title="situacaoImovel" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.situacaoImovel}" />
-				<h:selectOneMenu  name="imovel" id="situacaoImovel">    
-<%--     			<f:selectItems value="#{pessoas.situacaoImovel}" />   --%>
-				</h:selectOneMenu>
-			</datatables:column>
-			
-			<datatables:column title="grauParentescoImovelRural" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.grauParentescoImovelRural}" />
-				<h:selectOneMenu  name="imovelRural" id="grauParentescoImovelRural">    
-<%--     			<f:selectItems value="#{pessoas.grauParentescoImovelRural}" />   --%>
-				</h:selectOneMenu> 
-			</datatables:column>
-			
-			<datatables:column title="areaPropriedade" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.areaPropriedade}" />
-			</datatables:column>
-			
-			<datatables:column title="cidadeEstado" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.cidadeEstado}" />
-			</datatables:column>
-			
-			<datatables:column title="veiculo" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.veiculo}" />
-			</datatables:column>
-			
-			<datatables:column title="grauParentescoVeiculos" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.grauParentescoVeiculos}" />
-				<h:selectOneMenu  name="veiculo" id="grauParentescoVeiculos">    
-<%--     			<f:selectItems value="#{pessoas.grauParentescoVeiculos}" />   --%>
-				</h:selectOneMenu/>
-			</datatables:column>
-			
-			<datatables:column title="tipo" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.tipo}" />
-			</datatables:column>
-			
-			<datatables:column title="marca" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.marca}" />
-			</datatables:column>
-			
-			<datatables:column title="modelo" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.modelo}" />
-			</datatables:column>
-			
-			<datatables:column title="ano" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.ano}" />
-			</datatables:column>
-			
-			<datatables:column title="finalidadeVeiculo" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.finalidadeVeiculo}" />
-				<h:selectOneMenu  name="veiculoFinalidade" id="finalidadeVeiculo">    
-<%--     			<f:selectItems value="#{pessoas.finalidadeVeiculo}" />   --%>
-				</h:selectOneMenu/>
-			</datatables:column>			
-			
-			<datatables:column title="tipoEnsinoFundamental" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.tipoEnsinoFundamental}" />
-			</datatables:column>
-			
-			<input type="radio" name="escola" value="publica"> Escola Publica <br />
-			<input type="radio" name="escola" value="particular"> Escola Particular <br />
-			<input type="radio" name="escola" value="bolsa"> Com bolsa <textarea rows="1" cols="3">%</textarea> <br />
-			
-			<datatables:column title="tipoEnsinoMedio" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.tipoEnsinoMedio}" />
-			</datatables:column>
-			
-			<input type="radio" name="colegio" value="publica"> Escola Publica <br />
-			<input type="radio" name="colegio" value="particular"> Escola Particular <br />
-			<input type="radio" name="colegio" value="bolsa"> Com bolsa <textarea rows="1" cols="3">%</textarea> <br />
-			
-			<datatables:column title="cursinho" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.cursinho}" />
-			</datatables:column>
-			
-			<datatables:column title="nomeCursinho" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.nomeCursinho}" />
-			</datatables:column>
-			
-			<input type="radio" name="cursinho" value="nao"> Não <br />
-			<input type="radio" name="cursinho" value="sim"> Sim, qual <textarea rows="1" cols="15"></textarea> <br /><br />
-			
-			<datatables:column title="rendaMediaFamilia" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.rendaMediaFamilia}" />
-			</datatables:column>
-			
-			<datatables:column title="rendaMediaPessoa" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.rendaMediaPessoa}" />
-			</datatables:column>
-			
-			<datatables:column title="bolsista" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.bolsista}" />
-			</datatables:column>
-			
-			<datatables:column title="tipoBolsa" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.tipoBolsa}" />
-			</datatables:column>
-			
-			<datatables:column title="possuiGraduacao" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.possuiGraduacao}" />
-			</datatables:column>
-			
-			<datatables:column title="descricaoGraduacao" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.descricaoGraduacao}" />
-			</datatables:column>
-			
-			<datatables:column title="justificativa" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.justificativa}" />
-			</datatables:column>
-			
-			<datatables:column title="dataInscricao" cssStyle="width: 200px;">
-				<c:out value="${questionarioAuxilioMoradia.pessoas.dataInscricao}" />
-			</datatables:column>
-
-			
-			<datatables:column title="Editar" display="html" property="editar">
-				<button id="btnEditar" class="btn btn-default btn-lg editarAluno"
-					data-toggle="modal" data-target="#myModal"
-					onclick="povoaForm('<c:url value="/inscricao/${auxilio.id}" />', '#add-aluno-form', this);">
-					<span class="glyphicon glyphicon-edit"></span>
-				</button>
-			</datatables:column>
-			<datatables:column title="Excluir" display="html" property="excluir">
-				<button id="btnExcluir" class="btn btn-default btn-lg"
-					onclick="excluir('#alunos','<c:url value="/inscricao/${auxilio.id}" />', this);">
-					<span class="glyphicon glyphicon-trash"></span>
-				</button>
-			</datatables:column>
-			
-
-
-
-		</datatables:table>
-
+			 
 		<!-- Modal -->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 			aria-labelledby="myModalLabel" aria-hidden="true">
