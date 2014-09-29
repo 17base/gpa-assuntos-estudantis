@@ -36,6 +36,12 @@
 			</a>
 		</div>
 		
+		<div align="right" style="margin-bottom: 20px;">
+			<a href="<c:url value="/inscricao/iniciacaoAcademica" ></c:url>">
+				<button class="btn btn-primary">IniciacaoAcademica <span class="glyphicon glyphicon-plus"></span></button>
+			</a>
+		</div>
+		
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="active"><a href="#meus-alunos" role="tab" data-toggle="tab">Alunos Cadastrados</a></li>
